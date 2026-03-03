@@ -1,0 +1,81 @@
+{
+  "name": "self-evolution-system",
+  "version": "1.0.0",
+  "description": "OpenClaw Agent Self-Evolution System - Automated learning, maintenance, and task scheduling",
+  "author": "Digital Life Company",
+  "license": "MIT",
+  "keywords": [
+    "openclaw",
+    "agent",
+    "self-evolution",
+    "automation",
+    "memory-management",
+    "scheduled-tasks"
+  ],
+  "files": [
+    "README.md",
+    "scripts/",
+    "templates/",
+    "examples/",
+    "INSTALL.md",
+    "USAGE.md"
+  ],
+  "scripts": {
+    "install": "node scripts/install.js",
+    "check": "node scripts/self-check.js",
+    "skill-learning": "node scripts/daily-skill-learning.js",
+    "self-evolution": "node scripts/self-evolution.js",
+    "autosave": "node scripts/autosave.js"
+  },
+  "requirements": {
+    "openclaw": ">=1.0.0",
+    "node": ">=18.0.0",
+    "platform": ["windows", "linux", "macos"]
+  },
+  "scheduledTasks": [
+    {
+      "name": "skill-learning",
+      "schedule": "0 2 * * *",
+      "script": "scripts/daily-skill-learning.js",
+      "description": "Daily skill discovery and learning"
+    },
+    {
+      "name": "self-evolution",
+      "schedule": "0 3 * * *",
+      "script": "scripts/self-evolution.js",
+      "description": "Daily self-evolution and system analysis"
+    },
+    {
+      "name": "self-check",
+      "schedule": "0 3 15 * *",
+      "script": "scripts/self-check.js",
+      "description": "Architecture self-check and auto-fix"
+    },
+    {
+      "name": "daily-reflexion",
+      "schedule": "0 23 * * *",
+      "script": "scripts/daily-reflexion.ps1",
+      "description": "Daily error review and lessons learned"
+    }
+  ],
+  "memory": {
+    "levels": 3,
+    "autoSave": {
+      "enabled": true,
+      "interval": "10m"
+    },
+    "vectorDB": {
+      "enabled": true,
+      "dimension": 384
+    }
+  },
+  "features": [
+    "automated-skill-learning",
+    "self-evolution",
+    "architecture-self-check",
+    "auto-fix",
+    "memory-management",
+    "cost-tracking",
+    "error-recovery"
+  ]
+}
